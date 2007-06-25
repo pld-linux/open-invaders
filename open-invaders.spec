@@ -2,7 +2,7 @@ Summary:	Clone of Space Invaders game
 Summary(pl.UTF-8):	Klon gry Space Invaders
 Name:		open-invaders
 Version:	0.2
-Release:	2
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.jamyskis.net/downloads/%{name}-%{version}.tar.gz
