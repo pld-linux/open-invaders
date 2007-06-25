@@ -2,11 +2,12 @@ Summary:	Clone of Space Invaders game
 Summary(pl.UTF-8):	Klon gry Space Invaders
 Name:		open-invaders
 Version:	0.2
-Release:	0.1
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.jamyskis.net/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	96cc02444606020360fa3762635f8c98
+Patch0:		%{name}-useless_files.patch
 URL:		http://www.jamyskis.net/invaders.php
 BuildRequires:	allegro-devel >= 4.2.1
 BuildRequires:	autoconf
@@ -24,6 +25,7 @@ napisanym w C++ używając biblioteki Allegro.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
