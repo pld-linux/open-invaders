@@ -2,11 +2,13 @@ Summary:	Clone of Space Invaders game
 Summary(pl.UTF-8):	Klon gry Space Invaders
 Name:		open-invaders
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.jamyskis.net/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	96cc02444606020360fa3762635f8c98
+Source1:	%{name}.desktop
+Source2:	%{name}.xpm
 Patch0:		%{name}-useless_files.patch
 URL:		http://www.jamyskis.net/invaders.php
 BuildRequires:	allegro-devel >= 4.2.1
@@ -37,9 +39,13 @@ napisanym w C++ używając biblioteki Allegro.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,3 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README TODO
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.xpm
