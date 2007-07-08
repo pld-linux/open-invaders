@@ -15,6 +15,7 @@ BuildRequires:	allegro-devel >= 4.2.1
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dumb-devel >= 0.9.3
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,7 +24,7 @@ using the Allegro library.
 
 %description -l pl.UTF-8
 open-invaders jest klonem gry Space Invaders opartym na licencji GPL,
-napisanym w C++ używając biblioteki Allegro.
+napisanym w C++ z użyciem biblioteki Allegro.
 
 %prep
 %setup -q
