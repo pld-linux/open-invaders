@@ -1,12 +1,12 @@
 Summary:	Clone of Space Invaders game
 Summary(pl.UTF-8):	Klon gry Space Invaders
 Name:		open-invaders
-Version:	0.2
+Version:	0.3
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.jamyskis.net/downloads/%{name}-%{version}.tar.gz
-# Source0-md5:	96cc02444606020360fa3762635f8c98
+# Source0-md5:	51cbdbc8f0cbba203557489f06de3e8d
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Patch0:		%{name}-useless_files.patch
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS NEWS README TODO
+%doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
