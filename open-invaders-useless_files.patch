@@ -1,11 +1,7 @@
---- open-invaders-0.2/Makefile.am~	2007-06-11 14:20:53.000000000 +0000
-+++ open-invaders-0.2/Makefile.am	2007-06-25 23:23:17.000000000 +0000
-@@ -3,17 +3,17 @@
- ## If you don't want it to overwrite it,
- ## 	Please disable it in the Anjuta project configuration
- 
--SUBDIRS = include src data
-+SUBDIRS = src data
+--- open-invaders-0.3/Makefile.am~	2007-10-29 12:54:15.000000000 +0100
++++ open-invaders-0.3/Makefile.am	2007-11-11 16:17:14.000000000 +0100
+@@ -6,13 +6,13 @@
+ 	data
  
  open_invadersdocdir = ${prefix}/doc/open-invaders
 -open_invadersdoc_DATA = \
@@ -14,16 +10,14 @@
 -	AUTHORS\
 -	ChangeLog\
 -	INSTALL\
--	NEWS\
--	TODO
+-	NEWS
 +#open_invadersdoc_DATA = \
 +#	README\
 +#	COPYING\
 +#	AUTHORS\
 +#	ChangeLog\
 +#	INSTALL\
-+#	NEWS\
-+#	TODO
++#	NEWS
  
  EXTRA_DIST = $(open_invadersdoc_DATA)
  
