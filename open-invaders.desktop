@@ -1,11 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=open-invaders
 Comment=Clone of Space Invaders game
 Comment[pl]=Klon gry Space Invaders
 Exec=open-invaders
 Terminal=false
-Icon=open-invaders.xpm
+Icon=open-invaders
 Type=Application
 Categories=Game;ArcadeGame;
 # vi: encoding=utf-8
